@@ -1,0 +1,27 @@
+# Environment & Secrets
+.env
+*.key
+*.pem
+
+# Python & Virtual Environments
+.venv/
+venv/
+__pycache__/
+*.pyc
+retrieval-lab/
+
+# Vector Database
+chroma_db/
+
+# Notebook Checkpoints
+.ipynb_checkpoints/
+
+# IDE Settings & System Files
+.vscode/
+.idea/
+.DS_Store
+
+# Ignore the entire data folder
+data/
+docs/
+figs/
