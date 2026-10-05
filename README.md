@@ -47,9 +47,6 @@ Standard character or token-based splitting often degrades the context in highly
 rag-retrieval-lab/
 
 ├── RAG_LangChain.ipynb     # MedQuad RAG implementation pipeline
-
 ├── requirements.txt        # Core dependencies
-
 ├── .gitignore              # Environment and local data isolation
-
-└── README.md 
+└── README.md               # Project documentation
