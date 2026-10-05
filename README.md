@@ -42,8 +42,14 @@ Standard character or token-based splitting often degrades the context in highly
 
 ## Project Structure
 
+ ```text
+
 rag-retrieval-lab/
-├── RAG_LangChain.ipynb     # End-to-end MedQuad RAG implementation pipeline
-├── requirements.txt        # Core dependencies (LangChain, ChromaDB, OpenAI, etc.)
+
+├── RAG_LangChain.ipynb     # MedQuad RAG implementation pipeline
+
+├── requirements.txt        # Core dependencies
+
 ├── .gitignore              # Environment and local data isolation
-└── README.md               # Technical project documentation
+
+└── README.md 
