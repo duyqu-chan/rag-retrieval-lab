@@ -29,3 +29,21 @@ Standard character or token-based splitting often degrades the context in highly
    ```bash
    git clone [https://github.com/duyqu-chan/rag-retrieval-lab.git](https://github.com/duyqu-chan/rag-retrieval-lab.git)
    cd rag-retrieval-lab
+
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txtpip install -r requirements.txt
+
+3. **Environment Setup:** Ensure you have your OpenAI credentials ready. Create a .env file in the root directory.
+   ```bash
+   OPENAI_API_KEY="your_api_key_here"
+
+4. **Execution:** Launch Jupyter environment and execute RAG_LangChain.ipynb to initialize the ChromaDB vector store, embed the medical literature, and query the LCEL chain.
+
+## Project Structure
+
+rag-retrieval-lab/
+├── RAG_LangChain.ipynb     # End-to-end MedQuad RAG implementation pipeline
+├── requirements.txt        # Core dependencies (LangChain, ChromaDB, OpenAI, etc.)
+├── .gitignore              # Environment and local data isolation
+└── README.md               # Technical project documentation
