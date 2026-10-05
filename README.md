@@ -4,21 +4,28 @@ A modular research and development laboratory for testing, evaluating, and bench
 
 ---
 
-## Featured Projects & Experiments
+## Project Overview: MedQuad Medical RAG (PoC)
 
-### MedQuad Medical RAG (PoC)
-* **Goal**: Accurate medical Q&A over reliable health literature (NIH, MedlinePlus, Cancer.gov).
-* **Chunking Strategy**: Structured Question & Answer atomic chunking (`chunk_overlap=0`).
-* **Vector Store**: ChromaDB with OpenAI `text-embedding-3-small`.
-* **Pipeline & LLM**: Built with LangChain Expression Language (LCEL) and `gpt-4o-mini`.
+This Proof of Concept (PoC) project demonstrates a highly accurate medical Question & Answer system. By leveraging reliable health literature (NIH, MedlinePlus, Cancer.gov) through the MedQuad dataset, the system mitigates Large Language Model (LLM) hallucinations and provides grounded, context-aware medical responses. 
 
----
+## System Architecture & Tech Stack
 
-## Project Structure
+*   **Orchestration:** LangChain (implemented via LCEL - LangChain Expression Language for optimized pipeline execution)
+*   **Vector Store:** ChromaDB (for efficient local semantic search and document retrieval)
+*   **Embeddings:** OpenAI `text-embedding-3-small` (for high-dimensional semantic representation)
+*   **Generative Model:** OpenAI `gpt-4o-mini`
+*   **Environment:** Python, Jupyter Notebook
 
-```text
-rag-retrieval-lab/
-├── RAG_LangChain.ipynb     # MedQuad RAG implementation pipeline
-├── requirements.txt        # Core dependencies
-├── .gitignore              # Environment and local data isolation
-└── README.md               # Project documentation
+## Data Processing & Chunking Strategy
+
+Standard character or token-based splitting often degrades the context in highly technical domains like healthcare. To address this, the project implements a custom data ingestion architecture:
+*   **Strategy:** Structured Question & Answer atomic chunking.
+*   **Parameters:** `chunk_overlap=0`
+*   **Rationale:** Medical data requires strict precision. By treating each Q&A pair from the MedQuad dataset as an atomic, indivisible unit, the retrieval phase guarantees that semantic meaning is preserved without introducing noise from overlapping, irrelevant text chunks.
+
+## Installation & Usage
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/duyqu-chan/rag-retrieval-lab.git](https://github.com/duyqu-chan/rag-retrieval-lab.git)
+   cd rag-retrieval-lab
